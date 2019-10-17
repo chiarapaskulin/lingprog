@@ -1,1 +1,1 @@
-"# lingprog" 
+"linguagem de programação" 
