@@ -1,0 +1,11 @@
+{
+    "keepFields":["customfield_18240"],
+    "projectKey":"GSHCMLACLA20",
+    "parentBacklog":"GSHCMLACLA20-116",
+    "issueType":"Task",
+    "labelTypePrefix":"HCM_",
+    "clusterLabels":["AR", "CL", "CO", "MX", "VE"],
+    "fixedIncidentKey":"GSHCMLACLA20-117",
+    "searchQuery":"project = $projectKey AND parent = $parentBacklog AND status != Accepted AND status != Completed",
+    "searchHistoryQuery":"project = $projectKey AND ( parent = $parentBacklog AND id != $fixedIncidentKey)"
+}

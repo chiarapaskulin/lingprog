@@ -1,0 +1,48 @@
+"use strict";
+const Q = require('q');
+
+let mySettings = undefined;
+let arrIncidents = undefined;
+let arrJira = undefined;
+
+const tryCompare = function(){
+    let deferred = Q.defer();
+    if(arrJira != undefined && arrIncidents != undefined && ( Object.keys(arrIncidents).length > 0 ) ){
+        let arrNewIncidents = {};
+        let arrUpdateIncidents = {};
+        //Incidents returned by the service
+        for(let x in arrIncidents){
+            if (arrJira.hasOwnProperty(x)){
+                compareToUpdate(x,arrUpdateIncidents);
+                delete arrJira[x];
+                delete arrIncidents[x];
+            } else {
+                //uncoment to insert new incidents directly from bcp
+                //arrNewIncidents[x] = arrIncidents[x];
+            }
+        }
+        //Incidents only in Jira
+        for(let x in arrJira){
+            //do stuff here
+        }
+        deferred.resolve({new:arrNewIncidents, update:arrUpdateIncidents});
+    }
+    return deferred.promise;
+};
+const compareToUpdate = function(key,arrUpdate){
+    //comparison custom made for bcpstatus
+};
+
+module.exports = {
+    setConfig:function(settings){
+        mySettings = settings;
+    },
+    tryIncidents:function(arr){
+        arrIncidents = arr;
+        return tryCompare();
+    },
+    tryJira:function(arr){
+        arrJira = arr;
+        return tryCompare();
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "user": "I833145",
+    "hashPass": "qHhTRExYDwsnh8bXFrApQPrgRxjjg[DQcQuYJJTf",
+    "host": "bcp.wdf.sap.corp",
+    "port": 443,
+    "method": "GET",
+    "localCertFile": "/assets/global-bcp.cer",
+    "savedSearchId": "",
+    "searchPath": "/sap/bc/devdb/saved_search?sap-client=001&sap-language=en&search_id="
+}

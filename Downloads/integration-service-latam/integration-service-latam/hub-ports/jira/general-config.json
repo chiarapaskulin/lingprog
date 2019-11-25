@@ -1,0 +1,10 @@
+{
+    "host": "sapjira.wdf.sap.corp",
+    "protocol": "https",
+    "apiVersion": "2",
+    "strictSSL": false,
+    "fields":["labels"],
+    "fixedId": "BCPNID0",
+    "username":"T_GS_tech_user",
+    "password":"GSou!"
+}

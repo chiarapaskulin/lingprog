@@ -1,0 +1,23 @@
+{
+  "name": "integration-hub",
+  "version": "1.0.0",
+  "description": "Enhancing Jira to integrate everything",
+  "main": "main.js",
+  "dependencies": {
+    "cors": "^2.8.3",
+    "decache": "^4.5.1",
+    "express": "^4.16.4",
+    "jira-client": "^6.4.0",
+    "node-json-db": "^0.7.3",
+    "node-rest-client": "^3.1.0",
+    "node.extend": "^2.0.2",
+    "q": "^1.5.0",
+    "ssl-root-cas": "^1.2.3",
+    "xml2js": "^0.4.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Everton Correa, Rafael Schiavoni",
+  "license": "ISC"
+}

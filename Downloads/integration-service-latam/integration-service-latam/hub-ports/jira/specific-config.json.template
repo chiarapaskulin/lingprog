@@ -1,0 +1,35 @@
+// WARNING:
+// ALL THE COMMENTS IN THIS FILE SHOULD BE DELETED BEFORE USE
+{
+    "projectKey":"GSHCMZZZP18",// Change this for your project key
+    "parentBacklog":"GSHCMZZZP18-1131",// Change this for your bucket of incidents backlog key
+    "reporter":"i999999",// Change this to use a default reporter for all cards created by your application
+    "issueType":"DevTask",// Change this to use a default issueType for all cards created by your application
+    "labelTypePrefix":"HCMXX_",// Jira metrics: to classify the types using a prefix. Example: HCMXX_activities HCMXX_improvments
+    "clusterLabels":["Payroll", "Taxes"],// Jira metrics: metrics script search for only one of this labels to classify by theme/cluster
+    "dod":[// This is a Definition Of Done list, used to create a default list for all cards created by Jira. Leave as a blank array if you don't want to use it
+            {   "name": "Test checklist reviewed", // Description of the DOD item
+                "checked": false,
+                "mandatory": true,
+                "option": false,
+                "id": 1,
+                "rank": 1},
+            {   "name": "Another item",
+                "checked": false,
+                "mandatory": true,
+                "option": false,
+                "id": 2,
+                "rank": 2},
+            {   "name": "Another item",
+                "checked": false,
+                "mandatory": true,
+                "option": false,
+                "id": 3,
+                "rank": 3}
+        ],
+    "activeSprint":"00000", // Jira metrics: Used to define the current used sprint. You can replace it by the sprint text. Ex: "activeSprint":"\"Our active sprint\"",  or by the JQL function the use the active sprints in the project. Ex: "activeSprint":"openSprints()",
+    "fixedIncidentKey":"GSHCMZZZP18-2222", // Used to define the card that the searchQuery should always return, identifying a success search
+    "testDodIndex":0, // Used in the comparer to identify the test DOD item index
+    "searchQuery":"project = $projectKey AND parent = $parentBacklog AND status != Accepted AND status != Completed", // This is the JQL seach query used in Jira to get all the cards you want to use to compare with the incidents, in this example query we get everything of the project, and subtasks of a backlog and not with status (Accepted or Completed). Important to always bring the fixed incident to verify that the jira endpoint is working
+    "searchHistoryQuery":"project = $projectKey AND ( (Sprint = $activeSprint AND type != Task) OR (parent = $parentBacklog AND id != $fixedIncidentKey))" // This is the JQL query search used to analize the data in metrics
+}

@@ -1,0 +1,38 @@
+// WARNING:
+// ALL THE COMMENTS IN THIS FILE SHOULD BE DELETED BEFORE USE
+{
+    "mapColumns":{// This mapColumns translate the status to column name used in the change manager
+        "briefme":"Brief me",
+        "todo":"To-Do",
+        "analysis":"Analysis",
+        "dev":"Dev",
+        "testing":"Testing",
+        "delivery":"Delivery (Pilot)",
+        "blocked":"Blocked",
+        "piloting":"Piloting",
+        "customeract":"Customer Act.",
+        "deliveryrfc":"Delivery (RFC)",
+        "completed":"Completed"
+    },
+    "testDodIndex":0, // Used in the comparer to identify the test DOD item index
+    "dod":[// This is a Definition Of Done list, used to create a default list for all cards created by Jira. Leave as a blank array if you don't want to use it
+            {   "name": "Test checklist reviewed", // Description of the DOD item
+                "checked": false,
+                "mandatory": true,
+                "option": false,
+                "id": 1,
+                "rank": 1},
+            {   "name": "Another item",
+                "checked": false,
+                "mandatory": true,
+                "option": false,
+                "id": 2,
+                "rank": 2},
+            {   "name": "Another item",
+                "checked": false,
+                "mandatory": true,
+                "option": false,
+                "id": 3,
+                "rank": 3}
+        ]
+}
